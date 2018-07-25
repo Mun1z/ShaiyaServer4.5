@@ -1,0 +1,38 @@
+This is a simple instructions. Dont expect me to explain everything becoz i just dont have enough time even for myself.
+
+PLEASE TAKE NOTE:
+This instruction is given with the assumption that you haven't install Private Server + Database yet.  It is meant for clean and new installation only. 
+If you plan to use this for upgrading, please save all your files and database first ok? Dont come and blame me if anything happened to your old Shaiya Installation if you dont backup.
+
+Step 1: Extracting ShaiyaServer Folder
+- Extract the Folder from the zipped files to D:\ or C:\ or whichever drive but must be at the main (e.g. D:\ShaiyaServer) ok? I havent try on sub folder, so if plan to install under sub folder, well you can try but dont expect an answer if it doesnt work ok?
+
+Step 2: Attaching Database Files to your SQL Server 
+(I am assuming you already have an SQL Server installed with a DB Admin already in place. This will only work with Microsoft SQL Server 2000, 2005 or 2008, express edition (not sure, never tried it before), Standard and Enterprise Edition.  If you not yet have this? then go install one. There is another enough info on how to install MS SQL Server, therefore i wont list it here again. and dont bother asking me too.
+
+- Open your SMSS and attach the database Files from the [drive]:\ShaiyaServer\DATABASE\*.* (please attach all database files). 
+Notes:  If you dont know how to attach database files, here is a simple tutorial on how to attach the database files  (http://www.youtube.com/watch?v=OLuciwUZCv0&feature=related)
+
+- Then go to your ShaiyaServer main folder, inside there is a file called "SQL New Installation.sql".  Please open this file (if you install SMSS, it will open the file automatically in the SMSS, or else just manually open this files in notepad or something then copy and paste it on a new query ). From here please edit any text with 'your-db-username' to your db admin name and 'your-db-userpassword' to your db Admin password. Once you done that, just excute the query.
+
+Step 3: Running your ShaiyaServer
+- Go to your ShaiyaServer folder. Run the shaiya_svc_register.bat
+- Once you run that, go to PSM_Server folder. Click on PSMServer_Mgr.exe.  This is run the Server Patch Config Windows (or PSM Server Manager)
+- From there, go to "Server Setup" Menu > then select "Apply Windows Registry"
+- Again go to "Server Setup" Menu > then select "Service Install All". 
+
+Next is:
+- on the main PSM Server Manager windows, please click on "Session".  See DB, then please edit the Account (enter your DB Admin username) and Passwd (and enter your DB Admin password) and click "Apply All DB Account + Passwd" button. PLEASE MAKE SURE YOUR DB Username and Password is correct or else the service wont run.
+- on the main PSM Server Manager windows, please select GameGroups > GameGroups01.  From here please updates 2 things: Public IP (change it to your ShaiyServer IP Address or else leave it as 127.0.0.1 but if leave it make sure you client is pointed to this address. I am just assuming that you using the same Machine for both Client and Server). Then also change the Public Name such as "My Server" or "Gaia" something, your choice really.
+- Go to Server Update > then select "Update to all server". Wait for it to finish update.
+- Then go to Control Service > and Select Start All Server Service.
+
+Finally is:
+Related version of the verification 
+Login01 - Right Command pop-up dialog box, enter / vchkoff press Enter! 
+
+NP verification related 
+Game - Right Command pop-up dialog box enter / nprotectoff press Enter! 
+
+
+
