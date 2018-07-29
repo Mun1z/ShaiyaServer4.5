@@ -6,7 +6,6 @@ END
 EXEC sp_addsrvrolemember 'Shaiya', 'sysadmin';
 
 TRUNCATE TABLE PS_UserData.dbo.Users_Master;
-TRUNCATE TABLE OMG_GameWEB.dbo.GameAccountTBL;
 TRUNCATE TABLE PS_UserData.dbo.Users_Detail;
 	
 if exists(select * 
@@ -70,14 +69,6 @@ BEGIN
 	INSERT INTO PS_UserData.dbo.Users_Master
 	(UserUID, UserID, Pw, JoinDate, Admin, AdminLevel, UseQueue, Status, Leave, LeaveDate, UserType, UserIp, ModiIp, ModiDate, Enpassword, Point)
 	VALUES (1,'admin', 'admin123', GETDATE(), 1, 255,'',16,'', DATEADD(year, +10, GETDATE()),'A',NULL,NULL,NULL,NULL,0);
-END
-
-
-IF NOT EXISTS (SELECT UserUID FROM OMG_GameWEB.dbo.GameAccountTBL WHERE UserUID=1)
-BEGIN
-	INSERT INTO OMG_GameWEB.dbo.GameAccountTBL
-	(UserUID,GameAccount,OneTimePassword,OTPExpireDate,DelCharPWD,CreateDate)
-	VALUES (1,'admin','admin123',DATEADD(year, +20, GETDATE()),'ff',GETDATE())
 END
 
 IF NOT EXISTS (SELECT UserUID FROM PS_UserData.dbo.Users_Detail WHERE UserUID=1)
