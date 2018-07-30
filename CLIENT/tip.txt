@@ -1,0 +1,8 @@
+Being the best is more than just being able to attack quickly.
+Be careful in the borderlands! The opposing forces can swiftly ambush you.
+You can only change sides after you delete all of your existing characters.
+While in Easy Mode, Special skills are unavailable and you cannot progress beyond level 30.
+You can move using 'w', 'a', 's', 'd' (double-tap 'w' to auto-run) or by clicking your mouse.
+Hard Mode characters are stronger than Normal Mode characters, but they require more EXP to level up.
+Double-tap 'q', 'e' and 's' to launch into rolls and flips. Press 'c' to sit down and take a rest.
+If you get stuck, press Space-Bar to jump, or type '/return' in normal chat.
