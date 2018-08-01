@@ -1,3 +1,9 @@
 Config
 ShaiyaServerPatch
 Log
+/CLIENT/Workspace
+/CLIENT/data
+/CLIENT/data.saf
+/CLIENT/Updater.exe
+/SERVER/DATABASE
+/DATABASE
